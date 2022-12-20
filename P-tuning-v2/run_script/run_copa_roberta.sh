@@ -1,6 +1,7 @@
 export TASK_NAME=superglue
 export DATASET_NAME=copa
 export CUDA_VISIBLE_DEVICES=0
+export OMP_NUM_THREADS=4
 
 bs=16
 lr=9e-3
