@@ -1,5 +1,5 @@
 # Robustness-of-Prefix-Tuning
-This work has been done as part of the capstone project at Univertsity of California, Los Angeles
+This work has been done as part of the capstone project at University of California, Los Angeles
 Team Members:  
 * Parth Shettiwar
 * Rohit Sunchu 
