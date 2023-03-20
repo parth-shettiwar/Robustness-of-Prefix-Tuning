@@ -26,7 +26,7 @@ The following libraries shoud be installed before running the following codes (c
 
 The codebase consists of the following files:
 * `prefix_tuning_train.py` : This file is used to train the models using fine-tuning and prefix-tuning mainly.  
-The various hyperparemeters and usage has been commented inside the file. Need to set the following parameters
+The various hyperparameters and usage has been commented inside the file. Need to set the following parameters
   * `randomSeed` : can be any integer value
   * `datas` : can be "snli", "ag_news", "sst2", "imdb", "yelp_polarity"
   * `lr` : sets the learning rate for training
@@ -49,4 +49,8 @@ The various hyperparemeters and usage has been commented inside the file. Need t
 
 ## Attack Examples
 
-We have included an example workflow for attacking a trained prefix tuning model. First, ensure that you have installed the [Textattack](https://github.com/QData/TextAttack) package. 
+We have included an example workflow for attacking a trained BERT model prefix tuned on AG News. First, ensure that you have installed the [Textattack](https://github.com/QData/TextAttack) package along with the above mentioned packages. Then, ensure that the directory `./Datasets/ag_news/` contains a file `test.hf` which contains the examples to be attacked in standard Huggingface dataset format. Finally, ensure there is a directory `./Prefix-AGNEWS-Seed23/` that contains a saved Huggingface [bert-base-uncased](https://huggingface.co/bert-base-uncased) model in `Prefix-AGNEWS-Seed23/model/` and a saved adapterhub prefix tuning adapter in `Prefix-AGNEWS-Seed23/prefix_tuning/`. You may then run
+```
+source bertAttackCommandAgnewsPrefixSeed23.sh
+```
+which will commence the attack, saving logs and checkpoints in the current directory.
