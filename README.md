@@ -45,3 +45,8 @@ The various hyperparemeters and usage has been commented inside the file. Need t
   ```
   python prefix_tuning_test.py
   ```
+
+
+## Attack Examples
+
+We have included an example workflow for attacking a trained prefix tuning model. First, ensure that you have installed the [Textattack](https://github.com/QData/TextAttack) package. 
